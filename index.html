@@ -1,148 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelSphere-Travel & Tours</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelSphere — Travel & Tours</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
 </head>
+
 <body>
-    
-    <header>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-    </header>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Travel<span>Sphere</span></a>
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tours">Tours</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#destinations" class="mobile-link">Destinations</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#tours" class="mobile-link">Tours</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="mobile-link" style="color:var(--gold)">Book Now ↗</a>
+  </div>
 
-
-    <div class="carousel">
-
-        <div class="list">
-
-            
-            <div class="item" style="background-image: url(image/italy.jpg);">
-                
-                <div class="content">
-                    <div class="title">ITALY</div>
-                    <div class="name">Tour</div>
-                    <div class="des">Indulge in the romance of history, art, and world-famous cuisine in every corner of this iconic country.</div>
-                    <div class="btn">
-                        <a href="italy.html" class="button">Explore Italy</a>
-                        
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/nepal.jpg);">
-                
-                <div class="content">
-                    <div class="title">NEPAL</div>
-                    <div class="name">Tour</div>
-                    <div class="des">Embark on a spiritual journey in the land of the Himalayas, where ancient temples and serene landscapes await.</div>
-                    <div class="btn">
-                        <a href="nepal.html" class="button">Explore Nepal</a>
-                          
-                     
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="item" style="background-image: url(image/america.jpg);">
-                
-                <div class="content">
-                    <div class="title">AMERICA</div>
-                    <div class="name">Tour</div>
-                    <div class="des">Discover the diverse landscapes and iconic landmarks, from bustling cities to serene national parks.</div>
-                    <div class="btn">
-                        <a href="america.html" class="button">Explore America</a>
-                      
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/austrailia.jpg);">
-                
-                <div class="content">
-                    <div class="title">AUSTRAILIA</div>
-                    <div class="name">Tour</div>
-                    <div class="des"> Explore the land of adventure with pristine beaches, unique wildlife, and the Great Barrier Reef.</div>
-                    <div class="btn">
-                        <a href="austraila.html" class="button">Explore Austrailia</a>
-                      
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/switzerland.jpg);">
-                
-                <div class="content">
-                    <div class="title">SWITZERLAND</div>
-                    <div class="name">Tour</div>
-                    <div class="des">Revel in the charm of snowy Alps, enchanting villages, and indulgent Swiss chocolates.</div>
-                    <div class="btn">
-                        <a href="switzerland.html" class="button">Explore Switzerland</a>
-                     
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="item" style="background-image: url(image/england.jpg);">
-                
-                <div class="content">
-                    <div class="title">ENGLAND</div>
-                    <div class="name">Tour</div>
-                    <div class="des"> Relive history and modernity with royal palaces, scenic countryside, and lively cities.</div>
-                    <div class="btn">
-                        <a href="england.html" class="button">Explore England</a>
-                    
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/new-zealand.jpg);">
-                
-                <div class="content">
-                    <div class="title">NEW-ZEALAND</div>
-                    <div class="name">Tour</div>
-                    <div class="des">Uncover stunning landscapes, adventure sports, and the magical allure of Middle-earth.</div>
-                    <div class="btn">
-                        <a href="new-zealand.html" class="button">Explore New-zealand</a>
-                    
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-
-        <!--next prev button-->
-        <div class="arrows">
-            <button class="prev"><</button>
-            <button class="next">></button>
-        </div>
-
-
-        <!-- time running -->
-        <div class="timeRunning"></div>
-
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active"
+        style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"></div>
+      <div class="hero-slide"
+        style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"></div>
+      <div class="hero-slide"
+        style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80')"></div>
+      <div class="hero-slide"
+        style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1600&q=80')"></div>
     </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Discover the World</p>
+      <h1 class="hero-title">Travel Beyond<br /><em>Every Horizon</em></h1>
+      <p class="hero-sub">Curated journeys to the world's most extraordinary destinations. Expert guides, seamless
+        experiences, memories that last a lifetime.</p>
+      <div class="hero-btns">
+        <a href="#destinations" class="btn-primary">Explore Destinations</a>
+        <a href="#tours" class="btn-outline">View Our Tours</a>
+      </div>
+    </div>
+    <div class="hero-dots" id="heroDots">
+      <button class="hero-dot active" data-i="0"></button>
+      <button class="hero-dot" data-i="1"></button>
+      <button class="hero-dot" data-i="2"></button>
+      <button class="hero-dot" data-i="3"></button>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-    <script src="js/app.js"></script>
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">12K+</div>
+      <div class="stat-label">Happy Travellers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">87</div>
+      <div class="stat-label">Destinations</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">16</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Avg. Rating</div>
+    </div>
+  </div>
+
+  <!-- Destinations -->
+  <section id="destinations">
+    <div class="dest-header">
+      <div>
+        <p class="section-tag">Where to Go</p>
+        <h2 class="section-title">Our <em>Destinations</em></h2>
+        <p class="section-desc">From the misty peaks of the Himalayas to the sun-drenched coasts of the Mediterranean —
+          every journey starts here.</p>
+      </div>
+      <a href="#tours" class="btn-outline">All Destinations →</a>
+    </div>
+    <div class="dest-grid reveal">
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Europe</p>
+          <h3 class="dest-name">Italy</h3>
+          <div class="dest-info"><span>🕐 10 Tours</span><span>✦ From $1,299</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Asia</p>
+          <h3 class="dest-name">Nepal</h3>
+          <div class="dest-info"><span>🕐 14 Tours</span><span>✦ From $899</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=900&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Americas</p>
+          <h3 class="dest-name">America</h3>
+          <div class="dest-info"><span>🕐 22 Tours</span><span>✦ From $1,099</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Oceania</p>
+          <h3 class="dest-name">Australia</h3>
+          <div class="dest-info"><span>🕐 11 Tours</span><span>✦ From $1,799</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=600&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Europe</p>
+          <h3 class="dest-name">Switzerland</h3>
+          <div class="dest-info"><span>🕐 9 Tours</span><span>✦ From $1,599</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=600&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Europe</p>
+          <h3 class="dest-name">England</h3>
+          <div class="dest-info"><span>🕐 8 Tours</span><span>✦ From $1,199</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+      <div class="dest-card">
+        <div class="dest-img"
+          style="background-image:url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=600&q=80')"></div>
+        <div class="dest-overlay">
+          <p class="dest-tag">Oceania</p>
+          <h3 class="dest-name">New Zealand</h3>
+          <div class="dest-info"><span>🕐 7 Tours</span><span>✦ From $2,099</span></div>
+        </div>
+        <a href="#tours" class="dest-explore">↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about-img-wrap reveal">
+      <div class="about-img-main"></div>
+      <div class="about-img-badge">
+        <span class="about-badge-num">16</span>
+        <span class="about-badge-text">Years of<br />Excellence</span>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <p class="section-tag">Who We Are</p>
+      <h2 class="section-title">Crafting Journeys<br /><em>Worth Telling</em></h2>
+      <p class="section-desc">TravelSphere is a passionate travel company based in Kathmandu, Nepal — connecting
+        adventurers with the world's most breathtaking destinations since 2008.</p>
+      <div class="about-list">
+        <div class="about-item">
+          <div class="about-icon">🌍</div>
+          <div>
+            <p class="about-item-title">Handpicked Experiences</p>
+            <p class="about-item-desc">Every tour is personally vetted by our team to ensure authenticity, safety, and
+              unforgettable moments.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">🤝</div>
+          <div>
+            <p class="about-item-title">Local Expertise</p>
+            <p class="about-item-desc">Our network of trusted local guides gives you insider access that typical tours
+              simply can't offer.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">⭐</div>
+          <div>
+            <p class="about-item-title">Award-Winning Service</p>
+            <p class="about-item-desc">Recognized by the Nepal Tourism Board and Travel Asia Awards for outstanding
+              customer experiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div style="text-align:center; max-width: 560px; margin: 0 auto;">
+      <p class="section-tag">What We Offer</p>
+      <h2 class="section-title">Everything for Your<br /><em>Perfect Journey</em></h2>
+      <p class="section-desc" style="max-width:100%">From first inquiry to final farewell, our services are designed to
+        make every moment effortless.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-icon">✈️</div>
+        <h3 class="service-title">Best Flights</h3>
+        <p class="service-desc">Affordable, fast, and comfortable flight options with top global airlines — business,
+          premium economy, and beyond.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏨</div>
+        <h3 class="service-title">Premium Hotels</h3>
+        <p class="service-desc">Luxurious, cozy, and budget-friendly stays handpicked for comfort, location, and
+          authentic local character.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📅</div>
+        <h3 class="service-title">Easy Booking</h3>
+        <p class="service-desc">A seamless booking experience for flights, hotels, and tours — all in one place with
+          zero hassle.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <h3 class="service-title">Private Vehicles</h3>
+        <p class="service-desc">Safe, well-maintained vehicles and professional drivers for every journey, from airport
+          transfers to scenic road trips.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💬</div>
+        <h3 class="service-title">24/7 Support</h3>
+        <p class="service-desc">Dedicated round-the-clock customer support for all your travel inquiries — we're always
+          just a call away.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <h3 class="service-title">Luxury Experiences</h3>
+        <p class="service-desc">High-end curated services for those who love traveling in unparalleled style, comfort,
+          and exclusivity.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗺️</div>
+        <h3 class="service-title">Local Expertise</h3>
+        <p class="service-desc">Trusted recommendations from seasoned local travel guides who know every hidden gem and
+          secret spot.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔒</div>
+        <h3 class="service-title">Safe & Secure Trips</h3>
+        <p class="service-desc">Partnered with certified service providers and licensed operators for a completely
+          worry-free experience.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💰</div>
+        <h3 class="service-title">Budget-Friendly Plans</h3>
+        <p class="service-desc">Affordable travel packages for those who want to explore the world without compromising
+          quality or experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tours -->
+  <section id="tours">
+    <div class="tours-header">
+      <div>
+        <p class="section-tag">Featured Packages</p>
+        <h2 class="section-title">Popular <em>Tours</em></h2>
+      </div>
+      <div class="tours-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+        <button class="filter-btn" data-filter="cultural">Cultural</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+      </div>
+    </div>
+    <div class="tours-grid reveal">
+      <div class="tour-card" data-cat="adventure">
+        <div class="tour-img"
+          style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80')">
+          <span class="tour-badge">Adventure</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-meta"><span>⏱ 12 Days</span><span>👥 Max 14</span><span>📍 Nepal</span></div>
+          <h3 class="tour-name">Everest Base Camp Trek</h3>
+          <p class="tour-desc">Trek through legendary Sherpa villages, rhododendron forests and high alpine terrain to
+            the foot of the world's highest peak.</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-from">From</span>
+              <span class="tour-amount">$1,299</span>
+            </div>
+            <a href="#contact" class="tour-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="tour-card" data-cat="cultural">
+        <div class="tour-img"
+          style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80')">
+          <span class="tour-badge">Cultural</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-meta"><span>⏱ 10 Days</span><span>👥 Max 18</span><span>📍 Italy</span></div>
+          <h3 class="tour-name">Rome, Tuscany & Venice</h3>
+          <p class="tour-desc">Indulge in the romance of history, art, and world-famous cuisine — from the Colosseum to
+            gliding Venetian canals.</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-from">From</span>
+              <span class="tour-amount">$2,499</span>
+            </div>
+            <a href="#contact" class="tour-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="tour-card" data-cat="luxury">
+        <div class="tour-img"
+          style="background-image:url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=600&q=80')">
+          <span class="tour-badge">Luxury</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-meta"><span>⏱ 8 Days</span><span>👥 Max 10</span><span>📍 Switzerland</span></div>
+          <h3 class="tour-name">Swiss Alps Luxury Escape</h3>
+          <p class="tour-desc">Revel in the charm of snowy Alps, enchanting villages, and indulgent Swiss chocolates —
+            all at 5-star comfort.</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-from">From</span>
+              <span class="tour-amount">$3,899</span>
+            </div>
+            <a href="#contact" class="tour-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="tour-card" data-cat="adventure">
+        <div class="tour-img"
+          style="background-image:url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=600&q=80')">
+          <span class="tour-badge">Adventure</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-meta"><span>⏱ 14 Days</span><span>👥 Max 12</span><span>📍 New Zealand</span></div>
+          <h3 class="tour-name">Middle-Earth Explorer</h3>
+          <p class="tour-desc">Uncover stunning fjords, adventure sports, and the magical allure of New Zealand's
+            breathtaking landscapes.</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-from">From</span>
+              <span class="tour-amount">$3,299</span>
+            </div>
+            <a href="#contact" class="tour-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="tour-card" data-cat="cultural">
+        <div class="tour-img"
+          style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=600&q=80')">
+          <span class="tour-badge">Cultural</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-meta"><span>⏱ 9 Days</span><span>👥 Max 16</span><span>📍 England</span></div>
+          <h3 class="tour-name">Royal Britain & The Cotswolds</h3>
+          <p class="tour-desc">Relive history and modernity with royal palaces, scenic countryside, and the lively
+            culture of London's famous streets.</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-from">From</span>
+              <span class="tour-amount">$1,999</span>
+            </div>
+            <a href="#contact" class="tour-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="tour-card" data-cat="adventure">
+        <div class="tour-img"
+          style="background-image:url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80')">
+          <span class="tour-badge">Adventure</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-meta"><span>⏱ 15 Days</span><span>👥 Max 14</span><span>📍 Australia</span></div>
+          <h3 class="tour-name">East Coast Adventure</h3>
+          <p class="tour-desc">Explore the land of adventure with pristine beaches, unique wildlife, and the Great
+            Barrier Reef's coral wonderland.</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-from">From</span>
+              <span class="tour-amount">$2,799</span>
+            </div>
+            <a href="#contact" class="tour-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <p class="section-tag" style="justify-content:center">Traveller Stories</p>
+    <h2 class="section-title" style="text-align:center">Words from <em>Our Guests</em></h2>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The Everest Base Camp trek with TravelSphere was the most transformative experience of my
+          life. Every detail was handled perfectly — I just had to show up and be amazed."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"
+            style="background-image:url('https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=80&q=80')">
+          </div>
+          <div>
+            <p class="testi-name">Marcus Holloway</p>
+            <p class="testi-loc">London, UK</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Italy was a dream. Our guide Alessandro knew every hidden trattoria and secret piazza. We
+          ate, drank, and fell completely in love with the country. Already booking our next trip!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar"
+            style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&q=80')">
+          </div>
+          <div>
+            <p class="testi-name">Sophie Marchand</p>
+            <p class="testi-loc">Paris, France</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"From the seamless booking to the 24/7 support when our flight was delayed — TravelSphere
+          handled everything with grace. The Swiss Alps tour was beyond breathtaking."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"
+            style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80')">
+          </div>
+          <div>
+            <p class="testi-name">Ryan Nakamura</p>
+            <p class="testi-loc">Toronto, Canada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter">
+    <h2 class="newsletter-title">Ready to Explore?</h2>
+    <p class="newsletter-desc">Subscribe for exclusive deals, travel inspiration, and early access to new tours.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="Your email address" />
+      <button class="newsletter-btn" onclick="this.textContent='Subscribed ✓'">Subscribe</button>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <p class="section-tag">Get In Touch</p>
+    <h2 class="section-title">Start Your <em>Journey</em> Today</h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <p class="contact-item-label">Address</p>
+            <p class="contact-item-val">123 Travel Street, Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <p class="contact-item-label">Email</p>
+            <p class="contact-item-val">contact@travelsphere.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <p class="contact-item-label">Phone</p>
+            <p class="contact-item-val">+977-1234567890</p>
+          </div>
+        </div>
+        <div>
+          <p class="contact-item-label">Follow Us</p>
+          <div class="socials" style="margin-top:0.8rem">
+            <a href="#" class="social-btn">f</a>
+            <a href="#" class="social-btn">in</a>
+            <a href="#" class="social-btn">✕</a>
+          </div>
+        </div>
+        <div style="border-radius:4px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4627263750075!2d85.32401531500602!3d27.70518423221601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a8cf8b10e2c3f4d!2sKathmandu!5e0!3m2!1sen!2snp!4v1633153132068!5m2!1sen!2snp"
+            width="100%" height="220" style="border:0; display:block; filter:invert(90%) hue-rotate(180deg);"
+            allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div class="contact-form reveal" style="transition-delay:0.15s">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="John" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Doe" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="john@example.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Interested In</label>
+          <select class="form-input">
+            <option value="" disabled selected>Select a destination...</option>
+            <option>Italy</option>
+            <option>Nepal</option>
+            <option>America</option>
+            <option>Australia</option>
+            <option>Switzerland</option>
+            <option>England</option>
+            <option>New Zealand</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Message</label>
+          <textarea class="form-input" placeholder="Tell us about your dream trip…"></textarea>
+        </div>
+        <button class="form-submit" onclick="this.textContent='Message Sent ✓'">Send Message →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">Travel<span>Sphere</span></span>
+        <p class="footer-tagline">Crafting extraordinary journeys to the world's most iconic and undiscovered
+          destinations since 2008.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Destinations</p>
+        <ul class="footer-links">
+          <li><a href="#destinations">Italy</a></li>
+          <li><a href="#destinations">Nepal</a></li>
+          <li><a href="#destinations">Switzerland</a></li>
+          <li><a href="#destinations">New Zealand</a></li>
+          <li><a href="#destinations">Australia</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#tours">Tour Packages</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Support</p>
+        <ul class="footer-links">
+          <li><a href="#contact">Book a Tour</a></li>
+          <li><a href="#contact">24/7 Support</a></li>
+          <li><a href="#contact">FAQs</a></li>
+          <li><a href="#contact">Travel Insurance</a></li>
+          <li><a href="#contact">Visa Assistance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 TravelSphere Travel & Tours. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+ <script src="script.js"></script>
 </body>
+
 </html>
